@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>AJAX</title>
+      <link href="/2020/08/07/AJAX/"/>
+      <url>/2020/08/07/AJAX/</url>
+      
+        <content type="html"><![CDATA[<a id="more"></a><p><img src="/img/maimai1.jpg"><br>看看我可爱的麦麦~</p><p>AJAX指的是通过JS的异步通信，从服务器获取数据，再不刷新网页的前提下动态更新网页的相应部分</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> AJAX </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2020/08/07/hello-world/"/>
       <url>/2020/08/07/hello-world/</url>
