@@ -4,19 +4,32 @@
   
     
     <entry>
-      <title>AJAX</title>
-      <link href="/2020/08/07/AJAX/"/>
-      <url>/2020/08/07/AJAX/</url>
+      <title>Formatted</title>
+      <link href="/2020/08/11/Formatted/"/>
+      <url>/2020/08/11/Formatted/</url>
       
-        <content type="html"><![CDATA[<a id="more"></a><p><img src="/img/maimai1.jpg"><br>看看我可爱的麦麦~</p><p>AJAX指的是通过JS的异步通信，从服务器获取数据，再不刷新网页的前提下动态更新网页的相应部分</p>]]></content>
+        <content type="html"><![CDATA[<p><img src="/img/maimai2.jpg"><br>这是麦麦从沙发上掉下去了~<br>麦麦：从哪里跌倒就要在哪里睡觉</p><a id="more"></a><p>遇到一个问题<br>从服务器获取的数据并不是想要显示的结果这时候通过可以使用formatter属性来自定义表格的内容。<br>一般用于时间或者状态转换</p><p>状态:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-table-column</span><br><span class="line">    prop&#x3D;&quot;zipcode&quot;</span><br><span class="line">    label&#x3D;&quot;zipcode&quot;</span><br><span class="line">    width&#x3D;&quot;450&quot;</span><br><span class="line">    :formatter&#x3D;&quot;formatCode&quot;&gt;</span><br><span class="line">&lt;&#x2F;el-table-column&gt;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">formatCode(row) &#123;</span><br><span class="line">if(row.status &#x3D;&#x3D;&#x3D; 0) &#123;</span><br><span class="line">return &#39;否&#39;</span><br><span class="line">&#125; else &#123;</span><br><span class="line">return &#39;是&#39;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>日期:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-table-column</span><br><span class="line">    prop&#x3D;&quot;time&quot;</span><br><span class="line">    width&#x3D;&quot;50&quot;</span><br><span class="line">    :formatter&#x3D;&quot;formatDate&quot;&gt;</span><br><span class="line">&lt;&#x2F;el-table-column&gt;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">formatDate(row, column) &#123;</span><br><span class="line">let date &#x3D; new Date(row.time)</span><br><span class="line"></span><br><span class="line">return date.getFullYear() + &#39;-&#39; + date.getFullMonth() + &#39;-&#39; + date.getDate() + &#39; &#39; + date.getHours() + &#39;:&#39; + date.getMinutes() + &#39;:&#39; + date.getSeconds() + &#39;.&#39; + date.getMilliseconds();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       
       
       
         <tags>
             
-            <tag> AJAX </tag>
+            <tag> element-UI </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>就是麦麦</title>
+      <link href="/2020/08/07/%E5%B0%B1%E6%98%AF%E9%BA%A6%E9%BA%A6/"/>
+      <url>/2020/08/07/%E5%B0%B1%E6%98%AF%E9%BA%A6%E9%BA%A6/</url>
+      
+        <content type="html"><![CDATA[<a id="more"></a><p><img src="/img/maimai1.jpg"><br>看看我可爱的麦麦~</p>]]></content>
+      
+      
       
     </entry>
     
