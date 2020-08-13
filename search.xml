@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>element table动态添加tag</title>
+      <link href="/2020/08/13/element-table%E5%8A%A8%E6%80%81%E6%B7%BB%E5%8A%A0tag/"/>
+      <url>/2020/08/13/element-table%E5%8A%A8%E6%80%81%E6%B7%BB%E5%8A%A0tag/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/img/maimai3.jpg"><br>麦麦：歪歪歪？？</p><a id="more"></a><p>子组件某一部分，父组件对其有不同的数据呈现方式，这个时候可以用到插槽。<br>或者说在子组件某个地方留一个空，父组件可以在这里呈现。<br>使用slot-scope获取当前行的信息（scope.$index 索引，scope.row 当前行）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-table-column </span><br><span class="line">    label&#x3D;&quot;状态&quot;</span><br><span class="line">    prop&#x3D;&quot;status&quot;</span><br><span class="line">    :filters&#x3D;&quot;[&#123; text: &#39;待处理&#39;, value: &#39;待处理&#39; &#125;]&quot;</span><br><span class="line">    :filter-method&#x3D;&quot;filterTag&quot;</span><br><span class="line">    filter-placement&#x3D;&quot;bottom-end&quot;&gt;</span><br><span class="line">    &lt;template slot-scope&#x3D;&quot;scope&quot;&gt;</span><br><span class="line">        &lt;el-tag</span><br><span class="line">        :type&#x3D;&quot;scope.row.status &#x3D;&#x3D;&#x3D; &#39;0&#39; ? &#39;warning&#39; : &#39;success&#39;&quot;</span><br><span class="line">        close-transition&gt;&lt;&#x2F;el-tag&gt;</span><br><span class="line">    &lt;&#x2F;template&gt;</span><br><span class="line">&lt;&#x2F;el-table-column&gt;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">filterTag(value, row) &#123;</span><br><span class="line">    return row.tag &#x3D;&#x3D;&#x3D; value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> element </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Formatted</title>
       <link href="/2020/08/11/Formatted/"/>
       <url>/2020/08/11/Formatted/</url>
@@ -28,19 +47,6 @@
       <url>/2020/08/07/%E5%B0%B1%E6%98%AF%E9%BA%A6%E9%BA%A6/</url>
       
         <content type="html"><![CDATA[<a id="more"></a><p><img src="/img/maimai1.jpg"><br>看看我可爱的麦麦~</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2020/08/07/hello-world/"/>
-      <url>/2020/08/07/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
       
       
       
