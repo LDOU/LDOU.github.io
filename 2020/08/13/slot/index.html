@@ -20,30 +20,35 @@
     var CONFIG = {"hostname":"ldou.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="全都是麦麦啊   哈哈哈哈哈哈哈哈哈哈(&gt;^ω^">
-<meta property="og:type" content="website">
-<meta property="og:title" content="LDOU">
-<meta property="og:url" content="http://ldou.github.io/index.html">
+  <meta name="description" content="麦麦：芭乐姐姐的窝？？   哦不不不，是我的！！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="slot">
+<meta property="og:url" content="http://ldou.github.io/2020/08/13/slot/index.html">
 <meta property="og:site_name" content="LDOU">
-<meta property="og:description" content="全都是麦麦啊   哈哈哈哈哈哈哈哈哈哈(&gt;^ω^">
+<meta property="og:description" content="麦麦：芭乐姐姐的窝？？   哦不不不，是我的！！">
 <meta property="og:locale">
+<meta property="og:image" content="http://ldou.github.io/img/maimai4.jpg">
+<meta property="article:published_time" content="2020-08-13T07:43:55.000Z">
+<meta property="article:modified_time" content="2020-08-14T07:43:56.783Z">
 <meta property="article:author" content="LDOU">
+<meta property="article:tag" content="vue">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ldou.github.io/img/maimai4.jpg">
 
-<link rel="canonical" href="http://ldou.github.io/">
+<link rel="canonical" href="http://ldou.github.io/2020/08/13/slot/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-Hans'
   };
 </script>
 
-  <title>LDOU</title>
+  <title>slot | LDOU</title>
   
 
 
@@ -146,9 +151,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
@@ -164,10 +170,9 @@
       <meta itemprop="name" content="LDOU">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/13/slot/" class="post-title-link" itemprop="url">slot</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          slot
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -197,234 +202,60 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><img src="/img/maimai4.jpg"><br>麦麦：芭乐姐姐的窝？？   哦不不不，是我的！！</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/08/13/slot/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
+        <p><img src="/img/maimai4.jpg"><br>麦麦：芭乐姐姐的窝？？   哦不不不，是我的！！</p>
+<a id="more"></a>
+<p>子组件某一部分，父组件对其有不同的数据呈现方式，这个时候可以用到插槽。<br>或者说在子组件某个地方留一个空，父组件可以在这里呈现。<br>使用slot-scope获取当前行的信息（scope.$index 索引，scope.row 当前行）</p>
+<p>匿名插槽(名为default的插槽)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;slot&gt;aaa&lt;&#x2F;slot&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>当父组件没有给内容的时候，会渲染默认内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;p&gt;插入内容&lt;&#x2F;p&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br></pre></td></tr></table></figure>
+
+<p>父组件的内容都在父组件域编译；子组件内容都在子组件域编译；</p>
+<p>具名插槽</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;container&quot;&gt;</span><br><span class="line">    &lt;header&gt;</span><br><span class="line">        &lt;slot name&#x3D;&quot;header&quot;&gt;&lt;&#x2F;slot&gt;</span><br><span class="line">    &lt;&#x2F;header&gt;</span><br><span class="line">    &lt;main&gt;</span><br><span class="line">        &lt;slot&gt;&lt;&#x2F;slot&gt;</span><br><span class="line">    &lt;&#x2F;main&gt;</span><br><span class="line">    &lt;footer&gt;</span><br><span class="line">        &lt;slot name&#x3D;&quot;footer&quot;&gt;&lt;&#x2F;slot&gt;</span><br><span class="line">    &lt;&#x2F;footer&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>向具名插槽提供内容的时候，使用v-slot指令，并以参数的形式提供名称</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;base&gt;</span><br><span class="line">    &lt;template v-slot:header&gt;</span><br><span class="line">        &lt;p&gt;header内容&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;&#x2F;template&gt;</span><br><span class="line">    &lt;p&gt;默认插槽&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;template v-slot:footer&gt;</span><br><span class="line">        &lt;p&gt;footer内容&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;&#x2F;template&gt;</span><br><span class="line">&lt;&#x2F;base&gt;</span><br></pre></td></tr></table></figure>
+
+<p>注意：<br>1、任何没有被包裹在带有 v-slot 的 <template>中的内容都会被视为默认插槽的内容。<br>1、v-slot只能添加在<template>上</p>
+<p>渲染结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;container&quot;&gt;</span><br><span class="line">    &lt;header&gt;</span><br><span class="line">        &lt;p&gt;header内容&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;&#x2F;header&gt;</span><br><span class="line">    &lt;main&gt;</span><br><span class="line">        &lt;p&gt;默认插槽&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;&#x2F;main&gt;</span><br><span class="line">    &lt;footer&gt;</span><br><span class="line">        &lt;p&gt;footer内容&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;&#x2F;footer&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+
+<p>作用域插槽</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;ul&gt;</span><br><span class="line">            &lt;li v-for&#x3D;&quot;item in List&quot;&gt;</span><br><span class="line">                &lt;slot v-bind:itemValue &#x3D; &quot;item&quot;&gt;</span><br><span class="line">                &lt;&#x2F;slot&gt;</span><br><span class="line">            &lt;&#x2F;li&gt;</span><br><span class="line">        &lt;&#x2F;ul&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">    data() &#123;</span><br><span class="line">        return &#123;</span><br><span class="line">            List:[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>通过v-bind向父组件传递内容，暴露出接口itemValue</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;base&gt;</span><br><span class="line">    &lt;template slot-scope&#x3D;&quot;slotProps&quot;&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            </span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;template&gt;</span><br><span class="line">&lt;&#x2F;base&gt;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/vue/" rel="tag"># vue</a>
+          </div>
+
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://ldou.github.io/2020/08/13/element-table%E5%8A%A8%E6%80%81%E6%B7%BB%E5%8A%A0tag/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/m.jpg#/images/avatar.gif">
-      <meta itemprop="name" content="LDOU">
-      <meta itemprop="description" content="全都是麦麦啊   哈哈哈哈哈哈哈哈哈哈(>^ω^<)">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LDOU">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/13/element-table%E5%8A%A8%E6%80%81%E6%B7%BB%E5%8A%A0tag/" class="post-title-link" itemprop="url">table动态添加tag</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-08-13 11:04:36 / Modified: 15:45:28" itemprop="dateCreated datePublished" datetime="2020-08-13T11:04:36+08:00">2020-08-13</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img src="/img/maimai3.jpg"><br>麦麦：歪歪歪？？</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/08/13/element-table%E5%8A%A8%E6%80%81%E6%B7%BB%E5%8A%A0tag/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/08/13/element-table%E5%8A%A8%E6%80%81%E6%B7%BB%E5%8A%A0tag/" rel="prev" title="table动态添加tag">
+      <i class="fa fa-chevron-left"></i> table动态添加tag
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://ldou.github.io/2020/08/11/Formatted/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/m.jpg#/images/avatar.gif">
-      <meta itemprop="name" content="LDOU">
-      <meta itemprop="description" content="全都是麦麦啊   哈哈哈哈哈哈哈哈哈哈(>^ω^<)">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LDOU">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/11/Formatted/" class="post-title-link" itemprop="url">Formatted</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-08-11 16:55:05" itemprop="dateCreated datePublished" datetime="2020-08-11T16:55:05+08:00">2020-08-11</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-14 15:37:09" itemprop="dateModified" datetime="2020-08-14T15:37:09+08:00">2020-08-14</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img src="/img/maimai2.jpg"><br>这是麦麦从沙发上掉下去了~<br>麦麦：从哪里跌倒就要在哪里睡觉</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/08/11/Formatted/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://ldou.github.io/2020/08/07/%E5%B0%B1%E6%98%AF%E9%BA%A6%E9%BA%A6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/m.jpg#/images/avatar.gif">
-      <meta itemprop="name" content="LDOU">
-      <meta itemprop="description" content="全都是麦麦啊   哈哈哈哈哈哈哈哈哈哈(>^ω^<)">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LDOU">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/07/%E5%B0%B1%E6%98%AF%E9%BA%A6%E9%BA%A6/" class="post-title-link" itemprop="url">就是麦麦</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-08-07 16:30:11" itemprop="dateCreated datePublished" datetime="2020-08-07T16:30:11+08:00">2020-08-07</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-11 16:56:20" itemprop="dateModified" datetime="2020-08-11T16:56:20+08:00">2020-08-11</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <a id="more"></a>
-<p><img src="/img/maimai1.jpg"><br>看看我可爱的麦麦~</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 

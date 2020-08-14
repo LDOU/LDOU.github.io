@@ -22,14 +22,14 @@
 
   <meta name="description" content="麦麦：歪歪歪？？">
 <meta property="og:type" content="article">
-<meta property="og:title" content="element table动态添加tag">
+<meta property="og:title" content="table动态添加tag">
 <meta property="og:url" content="http://ldou.github.io/2020/08/13/element-table%E5%8A%A8%E6%80%81%E6%B7%BB%E5%8A%A0tag/index.html">
 <meta property="og:site_name" content="LDOU">
 <meta property="og:description" content="麦麦：歪歪歪？？">
 <meta property="og:locale">
 <meta property="og:image" content="http://ldou.github.io/img/maimai3.jpg">
 <meta property="article:published_time" content="2020-08-13T03:04:36.000Z">
-<meta property="article:modified_time" content="2020-08-13T03:37:58.652Z">
+<meta property="article:modified_time" content="2020-08-13T07:45:28.612Z">
 <meta property="article:author" content="LDOU">
 <meta property="article:tag" content="element">
 <meta name="twitter:card" content="summary">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title>element table动态添加tag | LDOU</title>
+  <title>table动态添加tag | LDOU</title>
   
 
 
@@ -171,7 +171,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          element table动态添加tag
+          table动态添加tag
         </h1>
 
         <div class="post-meta">
@@ -182,7 +182,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-08-13 11:04:36 / Modified: 11:37:58" itemprop="dateCreated datePublished" datetime="2020-08-13T11:04:36+08:00">2020-08-13</time>
+              <time title="Created: 2020-08-13 11:04:36 / Modified: 15:45:28" itemprop="dateCreated datePublished" datetime="2020-08-13T11:04:36+08:00">2020-08-13</time>
             </span>
 
           
@@ -200,13 +200,12 @@
 <a id="more"></a>
 
 
-
-<p>子组件某一部分，父组件对其有不同的数据呈现方式，这个时候可以用到插槽。<br>或者说在子组件某个地方留一个空，父组件可以在这里呈现。<br>使用slot-scope获取当前行的信息（scope.$index 索引，scope.row 当前行）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-table-column </span><br><span class="line">    label&#x3D;&quot;状态&quot;</span><br><span class="line">    prop&#x3D;&quot;status&quot;</span><br><span class="line">    :filters&#x3D;&quot;[&#123; text: &#39;待处理&#39;, value: &#39;待处理&#39; &#125;]&quot;</span><br><span class="line">    :filter-method&#x3D;&quot;filterTag&quot;</span><br><span class="line">    filter-placement&#x3D;&quot;bottom-end&quot;&gt;</span><br><span class="line">    &lt;template slot-scope&#x3D;&quot;scope&quot;&gt;</span><br><span class="line">        &lt;el-tag</span><br><span class="line">        :type&#x3D;&quot;scope.row.status &#x3D;&#x3D;&#x3D; &#39;0&#39; ? &#39;warning&#39; : &#39;success&#39;&quot;</span><br><span class="line">        close-transition&gt;&lt;&#x2F;el-tag&gt;</span><br><span class="line">    &lt;&#x2F;template&gt;</span><br><span class="line">&lt;&#x2F;el-table-column&gt;</span><br></pre></td></tr></table></figure>
 
 
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">filterTag(value, row) &#123;</span><br><span class="line">    return row.tag &#x3D;&#x3D;&#x3D; value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
     </div>
 
     
@@ -227,7 +226,10 @@
     <a href="/2020/08/11/Formatted/" rel="prev" title="Formatted">
       <i class="fa fa-chevron-left"></i> Formatted
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/08/13/slot/" rel="next" title="slot">
+      slot <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -301,7 +303,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
