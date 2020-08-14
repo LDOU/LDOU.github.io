@@ -29,7 +29,7 @@
 <meta property="og:locale">
 <meta property="og:image" content="http://ldou.github.io/img/maimai2.jpg">
 <meta property="article:published_time" content="2020-08-11T08:55:05.000Z">
-<meta property="article:modified_time" content="2020-08-14T07:37:09.231Z">
+<meta property="article:modified_time" content="2020-08-14T08:14:44.118Z">
 <meta property="article:author" content="LDOU">
 <meta property="article:tag" content="element">
 <meta name="twitter:card" content="summary">
@@ -188,7 +188,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-14 15:37:09" itemprop="dateModified" datetime="2020-08-14T15:37:09+08:00">2020-08-14</time>
+                <time title="Modified: 2020-08-14 16:14:44" itemprop="dateModified" datetime="2020-08-14T16:14:44+08:00">2020-08-14</time>
               </span>
 
           
@@ -214,7 +214,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-table-column</span><br><span class="line">    prop&#x3D;&quot;time&quot;</span><br><span class="line">    width&#x3D;&quot;50&quot;</span><br><span class="line">    :formatter&#x3D;&quot;formatDate&quot;&gt;</span><br><span class="line">&lt;&#x2F;el-table-column&gt;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">formatDate(row, column) &#123;</span><br><span class="line">	let date &#x3D; new Date(row.time)</span><br><span class="line"></span><br><span class="line">	return date.getFullYear() + &#39;-&#39; + date.getFullMonth() + &#39;-&#39; + date.getDate() + &#39; &#39; + date.getHours() + &#39;:&#39; + date.getMinutes() + &#39;:&#39; + date.getSeconds() + &#39;.&#39; + date.getMilliseconds();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 
     </div>
 

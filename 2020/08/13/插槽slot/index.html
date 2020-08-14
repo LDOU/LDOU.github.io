@@ -23,19 +23,19 @@
   <meta name="description" content="麦麦：芭乐姐姐的窝？？   哦不不不，是我的！！">
 <meta property="og:type" content="article">
 <meta property="og:title" content="slot">
-<meta property="og:url" content="http://ldou.github.io/2020/08/13/slot/index.html">
+<meta property="og:url" content="http://ldou.github.io/2020/08/13/%E6%8F%92%E6%A7%BDslot/index.html">
 <meta property="og:site_name" content="LDOU">
 <meta property="og:description" content="麦麦：芭乐姐姐的窝？？   哦不不不，是我的！！">
 <meta property="og:locale">
 <meta property="og:image" content="http://ldou.github.io/img/maimai4.jpg">
 <meta property="article:published_time" content="2020-08-13T07:43:55.000Z">
-<meta property="article:modified_time" content="2020-08-14T07:43:56.783Z">
+<meta property="article:modified_time" content="2020-08-14T08:29:08.081Z">
 <meta property="article:author" content="LDOU">
 <meta property="article:tag" content="vue">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://ldou.github.io/img/maimai4.jpg">
 
-<link rel="canonical" href="http://ldou.github.io/2020/08/13/slot/">
+<link rel="canonical" href="http://ldou.github.io/2020/08/13/%E6%8F%92%E6%A7%BDslot/">
 
 
 <script id="page-configurations">
@@ -158,7 +158,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://ldou.github.io/2020/08/13/slot/">
+    <link itemprop="mainEntityOfPage" href="http://ldou.github.io/2020/08/13/%E6%8F%92%E6%A7%BDslot/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/m.jpg#/images/avatar.gif">
@@ -188,7 +188,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-14 15:43:56" itemprop="dateModified" datetime="2020-08-14T15:43:56+08:00">2020-08-14</time>
+                <time title="Modified: 2020-08-14 16:29:08" itemprop="dateModified" datetime="2020-08-14T16:29:08+08:00">2020-08-14</time>
               </span>
 
           
@@ -213,12 +213,12 @@
 
 <p>父组件的内容都在父组件域编译；子组件内容都在子组件域编译；</p>
 <p>具名插槽</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;container&quot;&gt;</span><br><span class="line">    &lt;header&gt;</span><br><span class="line">        &lt;slot name&#x3D;&quot;header&quot;&gt;&lt;&#x2F;slot&gt;</span><br><span class="line">    &lt;&#x2F;header&gt;</span><br><span class="line">    &lt;main&gt;</span><br><span class="line">        &lt;slot&gt;&lt;&#x2F;slot&gt;</span><br><span class="line">    &lt;&#x2F;main&gt;</span><br><span class="line">    &lt;footer&gt;</span><br><span class="line">        &lt;slot name&#x3D;&quot;footer&quot;&gt;&lt;&#x2F;slot&gt;</span><br><span class="line">    &lt;&#x2F;footer&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;header&gt;</span><br><span class="line">        &lt;slot name&#x3D;&quot;header&quot;&gt;&lt;&#x2F;slot&gt;</span><br><span class="line">    &lt;&#x2F;header&gt;</span><br><span class="line">    &lt;main&gt;</span><br><span class="line">        &lt;slot&gt;&lt;&#x2F;slot&gt;</span><br><span class="line">    &lt;&#x2F;main&gt;</span><br><span class="line">    &lt;footer&gt;</span><br><span class="line">        &lt;slot name&#x3D;&quot;footer&quot;&gt;&lt;&#x2F;slot&gt;</span><br><span class="line">    &lt;&#x2F;footer&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
 
 <p>向具名插槽提供内容的时候，使用v-slot指令，并以参数的形式提供名称</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;base&gt;</span><br><span class="line">    &lt;template v-slot:header&gt;</span><br><span class="line">        &lt;p&gt;header内容&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;&#x2F;template&gt;</span><br><span class="line">    &lt;p&gt;默认插槽&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;template v-slot:footer&gt;</span><br><span class="line">        &lt;p&gt;footer内容&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;&#x2F;template&gt;</span><br><span class="line">&lt;&#x2F;base&gt;</span><br></pre></td></tr></table></figure>
 
-<p>注意：<br>1、任何没有被包裹在带有 v-slot 的 <template>中的内容都会被视为默认插槽的内容。<br>1、v-slot只能添加在<template>上</p>
+<p>注意：<br>1、任何没有被包裹在带有 v-slot 的 template 中的内容都会被视为默认插槽的内容。<br>1、v-slot只能添加在 template 上</p>
 <p>渲染结果：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;container&quot;&gt;</span><br><span class="line">    &lt;header&gt;</span><br><span class="line">        &lt;p&gt;header内容&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;&#x2F;header&gt;</span><br><span class="line">    &lt;main&gt;</span><br><span class="line">        &lt;p&gt;默认插槽&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;&#x2F;main&gt;</span><br><span class="line">    &lt;footer&gt;</span><br><span class="line">        &lt;p&gt;footer内容&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;&#x2F;footer&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
 
@@ -228,6 +228,9 @@
 
 <p>通过v-bind向父组件传递内容，暴露出接口itemValue</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;base&gt;</span><br><span class="line">    &lt;template slot-scope&#x3D;&quot;slotProps&quot;&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            </span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;template&gt;</span><br><span class="line">&lt;&#x2F;base&gt;</span><br></pre></td></tr></table></figure>
+
+
+
 
     </div>
 
