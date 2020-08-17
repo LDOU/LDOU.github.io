@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>$nextTick()</title>
+      <link href="/2020/08/17/nextTick/"/>
+      <url>/2020/08/17/nextTick/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/img/maimai5.jpg"><br>麦麦喜欢的睡觉姿势</p><p>vue在更新DOM时是异步执行的，为了在数据变化之后等待vue完成更新DOM，可以在数据变化之后立即使用Vue.nextTick(callback).这样回调函数将在DOM更新完成后被调用。</p><p>在creadted()钩子函数里进行的DOM操作一定要在Vue.nextTick()的回调函数中。<br>因为执行的时候DOM还没有渲染。</p><p>在mounted()钩子函数中，因为所有的DOM已经渲染完成，所有进行任何DOM操作都是可以的。</p><p>在数据改变DOM结构的时候，这个操作都应该放在Vue.nextTick()回调中。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>slot</title>
       <link href="/2020/08/13/%E6%8F%92%E6%A7%BDslot/"/>
       <url>/2020/08/13/%E6%8F%92%E6%A7%BDslot/</url>
