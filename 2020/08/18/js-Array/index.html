@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"ldou.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="芭乐宝宝小时候~">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js Array">
+<meta property="og:url" content="http://ldou.github.io/2020/08/18/js-Array/index.html">
+<meta property="og:site_name" content="LDOU">
+<meta property="og:description" content="芭乐宝宝小时候~">
+<meta property="og:locale">
+<meta property="og:image" content="http://ldou.github.io/img/bale1.jpg">
+<meta property="article:published_time" content="2020-08-18T08:30:44.000Z">
+<meta property="article:modified_time" content="2020-08-19T08:41:13.583Z">
+<meta property="article:author" content="LDOU">
+<meta property="article:tag" content="js">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ldou.github.io/img/bale1.jpg">
+
+<link rel="canonical" href="http://ldou.github.io/2020/08/18/js-Array/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>js Array | LDOU</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">LDOU</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://ldou.github.io/2020/08/18/js-Array/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/m.jpg#/images/avatar.gif">
+      <meta itemprop="name" content="LDOU">
+      <meta itemprop="description" content="全都是麦麦啊   哈哈哈哈哈哈哈哈哈哈(>^ω^<)">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LDOU">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          js Array
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-08-18 16:30:44" itemprop="dateCreated datePublished" datetime="2020-08-18T16:30:44+08:00">2020-08-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-08-19 16:41:13" itemprop="dateModified" datetime="2020-08-19T16:41:13+08:00">2020-08-19</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/img/bale1.jpg"><br>芭乐宝宝小时候~</p>
+<a id="more"></a>
+
+<p>shift() &amp; unshift()<br>shift()从头部取出值，返回第一项<br>unshift()从头部插入值，返回值是length</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const arr &#x3D; [&#39;1&#39;,&#39;a&#39;,&#39;2&#39;];    &#x2F;&#x2F;  [ &#39;77&#39;, &#39;a&#39;, &#39;2&#39; ]</span><br><span class="line">const b &#x3D; arr.shift()         &#x2F;&#x2F;  1</span><br><span class="line">const c &#x3D; arr.unshift(&#39;77&#39;)   &#x2F;&#x2F;  3</span><br></pre></td></tr></table></figure>
+
+
+<p>forEach()<br>给数组每一项运行给定函数，没有返回值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const arr &#x3D; [&#39;1&#39;,&#39;5&#39;,&#39;2&#39;];</span><br><span class="line">arr.forEach((item, index, array) &#x3D;&gt; &#123;</span><br><span class="line">  array[index] &#x3D; item * 2</span><br><span class="line">&#125;);                                     &#x2F;&#x2F;  [ 2, 10, 4 ]</span><br></pre></td></tr></table></figure>
+
+
+<p>includes()<br>includes(查找的值，查找起始位置)，如果第二个参数为负数说明从后开始查找，返回值是布尔值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const arr &#x3D; [&#39;1&#39;,&#39;5&#39;,&#39;2&#39;];</span><br><span class="line">console.log(arr.includes(3));        &#x2F;&#x2F;  false</span><br><span class="line">console.log(arr.includes(5, 2));     &#x2F;&#x2F;  false</span><br><span class="line">console.log(arr.includes(&#39;2&#39;, 1));   &#x2F;&#x2F;  true</span><br></pre></td></tr></table></figure>
+
+
+<p>indexOf() &amp; lastIndexOf<br>indexOf(查找的值，查找起始位置)，返回位置，如果查找不到返回-1<br>lastIndexOf从后往前找</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const values&#x3D; [1, 3, 4, 6];</span><br><span class="line">console.log(values.indexOf(4));      &#x2F;&#x2F; 2</span><br><span class="line">console.log(values.indexOf(4, 2));   &#x2F;&#x2F; 2</span><br><span class="line">console.log(values.indexOf(4, 3));   &#x2F;&#x2F; -1</span><br><span class="line">console.log(values.lastIndexOf(6));      &#x2F;&#x2F; 3</span><br><span class="line">console.log(values.lastIndexOf(6, 2));   &#x2F;&#x2F; 1</span><br></pre></td></tr></table></figure>
+
+
+<p>join()<br>改变间隔符，返回string</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const values&#x3D; [1, 3, 4, 6];</span><br><span class="line">console.log(values.join(&#39;$&#39;));     &#x2F;&#x2F;  1$3$4$6</span><br></pre></td></tr></table></figure>
+
+
+<p>keys() &amp; values() &amp; entries()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const arr&#x3D; [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;];       </span><br><span class="line">for (let index of arr.keys()) &#123;              &#x2F;&#x2F;  0</span><br><span class="line">  console.log(index);                        &#x2F;&#x2F;  1</span><br><span class="line">&#125;                                            &#x2F;&#x2F;  2</span><br><span class="line">for (let elem of arr.values()) &#123;             &#x2F;&#x2F; &#39;a&#39;</span><br><span class="line">  console.log(elem);                         &#x2F;&#x2F; &#39;b&#39;</span><br><span class="line">&#125;                                            &#x2F;&#x2F; &#39;c&#39;</span><br><span class="line">for (let [index,elem] of arr.entries()) &#123;    &#x2F;&#x2F;  0 &#39;a&#39;</span><br><span class="line">  console.log(index, elem);                  &#x2F;&#x2F;  1 &#39;b&#39;</span><br><span class="line">&#125;                                            &#x2F;&#x2F;  2 &#39;c&#39;</span><br></pre></td></tr></table></figure>
+
+
+<p>map()<br>给数组每一项运行给定函数，返回操作后的数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const arr &#x3D; [&#39;1&#39;,&#39;5&#39;,&#39;2&#39;];</span><br><span class="line">arr.forEach((item, index, array) &#x3D;&gt; &#123;</span><br><span class="line">  array[index] &#x3D; item * 2</span><br><span class="line">&#125;);                                     &#x2F;&#x2F;  [ 2, 10, 4 ]</span><br></pre></td></tr></table></figure>
+
+
+<p>push() &amp; pop()<br>push()从末尾添加数组项，返回length<br>pop()从末尾跳出，返回跳出项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const values&#x3D; [1, 3, 4, 6];</span><br><span class="line">console.log(values.pop(4));    &#x2F;&#x2F; 6</span><br><span class="line">console.log(values.push(4));   &#x2F;&#x2F; 5</span><br></pre></td></tr></table></figure>
+
+
+<p>reverse() &amp; sort()<br>reverse()反转数组，修改原数组<br>sort()按第一个字符排列，所以排列a - b,倒序b - a，修改原数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const values&#x3D; [1, 3, 4, 6];</span><br><span class="line">console.log(values.reverse());    &#x2F;&#x2F; [ 6, 4, 3, 1 ]</span><br><span class="line">const values&#x3D; [1, 3, 14, 6, 2];</span><br><span class="line">console.log(values.sort());    &#x2F;&#x2F; [ 1, 14, 2, 3, 6 ]</span><br><span class="line">values.sort((a, b) &#x3D;&gt; &#123;</span><br><span class="line">    return a - b</span><br><span class="line">&#125;)</span><br><span class="line">console.log(values)         &#x2F;&#x2F;[ 1, 2, 3, 6, 14 ]</span><br></pre></td></tr></table></figure>
+
+
+<p>slice() &amp; splice() &amp; concat()<br>slice(起始位置，结束位置)，截取数组返回新数组<br>concat()尾部增加数组项<br>concat(起始位置，删除数量，增加数量)，对原数组进行操作，返回删除项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const values&#x3D; [1, 3, 4, 6, 2];</span><br><span class="line">console.log(values.slice(1, 2));    &#x2F;&#x2F; [ 3 ]</span><br><span class="line">console.log(values.concat(1, 4));    &#x2F;&#x2F; [ 1, 3, 4, 6, 2, 1, 4 ]</span><br><span class="line">const a &#x3D; values.splice(1, 2)</span><br><span class="line">console.log(a);         &#x2F;&#x2F; [ 3, 4 ]</span><br><span class="line">console.log(values);    &#x2F;&#x2F; [ 1, 6, 2 ]</span><br><span class="line">const b &#x3D; values.splice(1, 0, &#39;2&#39;, &#39;2&#39;)</span><br><span class="line">console.log(b);          &#x2F;&#x2F; []</span><br><span class="line">console.log(values);    &#x2F;&#x2F; [ 1, &#39;2&#39;, &#39;2&#39;, 6, 2 ]</span><br><span class="line">const c &#x3D; values.splice(1, 1, &#39;2&#39;)</span><br><span class="line">console.log(c);     &#x2F;&#x2F; [ &#39;2&#39; ]</span><br><span class="line">console.log(values);    &#x2F;&#x2F; [ 1, &#39;2&#39;, &#39;2&#39;, 6, 2 ]</span><br></pre></td></tr></table></figure>
+
+
+<p>some() &amp; every()<br>返回布尔值ß</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const values&#x3D; [1, 3, 4, 6, 2];</span><br><span class="line">var f &#x3D; values.some((item) &#x3D;&gt; &#123;</span><br><span class="line">    return item &gt; 2</span><br><span class="line">&#125;)</span><br><span class="line">var f2 &#x3D; values.every((item) &#x3D;&gt; &#123;</span><br><span class="line">    return item &gt; 2</span><br><span class="line">&#125;)</span><br><span class="line">console.log(f)    &#x2F;&#x2F; true</span><br><span class="line">console.log(f2)    &#x2F;&#x2F; false</span><br></pre></td></tr></table></figure>
+
+
+<p>filter()<br>对每一项进行给定函数操作，返回结果数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const values&#x3D; [1, 3, 14, 6, 2];</span><br><span class="line">const a &#x3D; values.filter((item) &#x3D;&gt; &#123;</span><br><span class="line">    return item &gt; 2</span><br><span class="line">&#125;)</span><br><span class="line">console.log(a)         &#x2F;&#x2F;[ 14, 3, 6 ]</span><br></pre></td></tr></table></figure>
+
+
+<p>find() &amp; findIndex()<br>find()返回第一个符合条件的值，没有的话返回undefined<br>findIndex()返回第一个符合条件的位置，没有的话返回-1</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const values&#x3D; [1, 3, 14, 6, 2];</span><br><span class="line">const a &#x3D; values.find((item) &#x3D;&gt; &#123;</span><br><span class="line">    return item &gt; 2</span><br><span class="line">&#125;)</span><br><span class="line">console.log(a)         &#x2F;&#x2F;  14</span><br><span class="line">const b &#x3D; values.findIndex((item) &#x3D;&gt; &#123;</span><br><span class="line">    return item &gt; 2</span><br><span class="line">&#125;)</span><br><span class="line">console.log(b)         &#x2F;&#x2F;  1</span><br></pre></td></tr></table></figure>
+
+
+<p>Array.from()<br>可以对类似数组的对象（只要有length属性）进行转化为数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Array.from(&#39;hello&#39;); &#x2F;&#x2F; [&quot;h&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot;]</span><br><span class="line">let strSet &#x3D; new Set([&#39;a&#39;, &#39;b&#39;]);</span><br><span class="line">Array.from(strSet); &#x2F;&#x2F; [&#39;a&#39;, &#39;b&#39;]</span><br></pre></td></tr></table></figure>
+
+
+<p>Array.isArray()<br>判断是否是一个Array</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Array.isArray([1, 2, 3]);     &#x2F;&#x2F; true</span><br><span class="line">Array.isArray(&#123;foo: 123&#125;);    &#x2F;&#x2F; false</span><br><span class="line">Array.isArray(&quot;foobar&quot;);      &#x2F;&#x2F; false</span><br><span class="line">Array.isArray(undefined);     &#x2F;&#x2F; false</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/js/" rel="tag"># js</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/08/17/nextTick/" rel="prev" title="$nextTick()">
+      <i class="fa fa-chevron-left"></i> $nextTick()
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="LDOU"
+      src="/images/m.jpg#/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">LDOU</p>
+  <div class="site-description" itemprop="description">全都是麦麦啊   哈哈哈哈哈哈哈哈哈哈(>^ω^<)</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LDOU</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
