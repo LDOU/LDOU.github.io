@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>js字符串操作</title>
+      <link href="/2020/08/20/js%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/"/>
+      <url>/2020/08/20/js%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/img/bale2.jpg"><br>芭乐在线耍赖</p><a id="more"></a><p>charAt()<br>返回参数位置的字符,没有返回空</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let str &#x3D; &quot;ba le mai mai&quot;</span><br><span class="line">console.log(str.charAt(6))    &#x2F;&#x2F;  m</span><br><span class="line">console.log(str.charAt(26))   &#x2F;&#x2F;  &#39;&#39;</span><br></pre></td></tr></table></figure><p>charCodeAt()<br>返回参数位置的字符编码，没有则返回NaN</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let str &#x3D; &quot;ba le mai mai&quot;</span><br><span class="line">console.log(str.charCodeAt(6))    &#x2F;&#x2F;  109</span><br><span class="line">console.log(str.charCodeAt(26))   &#x2F;&#x2F;  NaN</span><br></pre></td></tr></table></figure><p>concat()<br>返回拼接字符串</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let str &#x3D; &quot;ba le mai mai&quot;</span><br><span class="line">console.log(str.concat(&#39; hao&#39;, &#39;ke&#39;, &#39;ai&#39;))    &#x2F;&#x2F;  ba le mai mai haokeai</span><br></pre></td></tr></table></figure><p>indexOf() &amp; lastIndexOf()<br>indexof(查找值，开始位置)，从头开始查找，返回位置，不存在返回-1<br>lastIndexOf(查找值，开始位置)，从尾巴开始查找，不存在返回-1</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let str &#x3D; &quot;ba le mai mai&quot;</span><br><span class="line">console.log(str.indexOf(&#39;a&#39;, 5))    &#x2F;&#x2F;  7</span><br><span class="line">console.log(str.lastIndexOf(&#39;a&#39;))   &#x2F;&#x2F;  11</span><br></pre></td></tr></table></figure><p>substring() &amp; substr() &amp; slice()<br>subsring(开始位置，结束位置)<br>substr(开始位置，数量)</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let str &#x3D; &quot;balemaimai&quot;</span><br><span class="line">console.log(str.substring(1, 5))    &#x2F;&#x2F;  alem</span><br><span class="line">console.log(str.substr(1, 5))   &#x2F;&#x2F;  alema</span><br><span class="line">console.log(str.slice(1, 5))  &#x2F;&#x2F;  alem</span><br></pre></td></tr></table></figure><p>split()<br>可以用来根据符号来分割字符串，或者换符号<br>可以把字符串根据条件转成数组</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let str &#x3D; &quot;ba le mai mai&quot;</span><br><span class="line">console.log(str.split(&quot; &quot;) + &quot;,&quot;)    &#x2F;&#x2F;  ba,le,mai,mai,</span><br><span class="line">console.log(str.split(&quot;&quot;) + &quot;,&quot;)   &#x2F;&#x2F;  b,a, ,l,e, ,m,a,i, ,m,a,i,</span><br><span class="line">console.log(str.split(&quot; &quot;, 3))      &#x2F;&#x2F;  [ &#39;ba&#39;, &#39;le&#39;, &#39;mai&#39; ]</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> js </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>js Array</title>
       <link href="/2020/08/18/js-Array/"/>
       <url>/2020/08/18/js-Array/</url>
