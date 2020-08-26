@@ -20,18 +20,18 @@
     var CONFIG = {"hostname":"ldou.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="#####原始类型:  Boolean Null Undefined Number BigInt String Symbol#####引用类型： Object  ####注意：  js只有一种数字类型，不管是符号值还是NaN都是Number类型 对象、数组、Data、正则都是Objecttypeof &amp;#123;a: 1&amp;#125; &#x3D;&#x3D;&#x3D; &#39;object&#39; typeof [1,">
-<meta property="og:type" content="article">
+  <meta property="og:type" content="article">
 <meta property="og:title" content="js数据类型">
 <meta property="og:url" content="http://ldou.github.io/2020/08/20/js%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/index.html">
 <meta property="og:site_name" content="LDOU">
-<meta property="og:description" content="#####原始类型:  Boolean Null Undefined Number BigInt String Symbol#####引用类型： Object  ####注意：  js只有一种数字类型，不管是符号值还是NaN都是Number类型 对象、数组、Data、正则都是Objecttypeof &amp;#123;a: 1&amp;#125; &#x3D;&#x3D;&#x3D; &#39;object&#39; typeof [1,">
 <meta property="og:locale">
+<meta property="og:image" content="http://ldou.github.io/img/blmm2.jpg">
 <meta property="article:published_time" content="2020-08-20T07:00:23.000Z">
-<meta property="article:modified_time" content="2020-08-20T08:49:52.682Z">
+<meta property="article:modified_time" content="2020-08-26T08:54:59.953Z">
 <meta property="article:author" content="LDOU">
 <meta property="article:tag" content="js">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ldou.github.io/img/blmm2.jpg">
 
 <link rel="canonical" href="http://ldou.github.io/2020/08/20/js%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
 
@@ -178,10 +178,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-08-20 15:00:23 / Modified: 16:49:52" itemprop="dateCreated datePublished" datetime="2020-08-20T15:00:23+08:00">2020-08-20</time>
+              <time title="Created: 2020-08-20 15:00:23" itemprop="dateCreated datePublished" datetime="2020-08-20T15:00:23+08:00">2020-08-20</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-08-26 16:54:59" itemprop="dateModified" datetime="2020-08-26T16:54:59+08:00">2020-08-26</time>
+              </span>
 
           
 
@@ -194,32 +200,54 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <a id="more"></a>
-<p>#####原始类型:</p>
-<ul>
+        <p><img src="/img/blmm2.jpg"></p>
+<a id="more"></a>
+<h3 id="原始类型"><a href="#原始类型" class="headerlink" title="原始类型:"></a>原始类型:</h3><ul>
 <li>Boolean</li>
 <li>Null</li>
 <li>Undefined</li>
 <li>Number</li>
 <li>BigInt</li>
 <li>String</li>
-<li>Symbol<br>#####引用类型：</li>
+<li>Symbol<br>引用类型：</li>
 <li>Object</li>
 </ul>
-<p>####注意：</p>
+<p>注意：</p>
 <ul>
 <li>js只有一种数字类型，不管是符号值还是NaN都是Number类型</li>
-<li>对象、数组、Data、正则都是Object<pre><code>typeof &#123;a: 1&#125; === &#39;object&#39;
-typeof [1, 2, 3] === &#39;object&#39;
-typeof new Date() === &#39;object&#39;
-typeof /regex/ === &#39;object&#39;
-typeof null === &#39;object&#39;
+<li>对象、数组、Data、正则都是Object<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">typeof &#123;a: 1&#125; &#x3D;&#x3D;&#x3D; &#39;object&#39;</span><br><span class="line">typeof [1, 2, 3] &#x3D;&#x3D;&#x3D; &#39;object&#39;</span><br><span class="line">typeof new Date() &#x3D;&#x3D;&#x3D; &#39;object&#39;</span><br><span class="line">typeof &#x2F;regex&#x2F; &#x3D;&#x3D;&#x3D; &#39;object&#39;</span><br><span class="line">typeof null &#x3D;&#x3D;&#x3D; &#39;object&#39;</span><br><span class="line"></span><br><span class="line">数据类型的判断</span><br><span class="line"></span><br><span class="line">+ typeof</span><br><span class="line">不能判断null、array</span><br><span class="line"></span><br><span class="line">+ instanceof</span><br><span class="line">用来判断A是否是B的实例 A instanceof B,返回布尔值</span><br><span class="line">判断一个对象在其原型链中是否存在一个构造函数的prototype属性，不能检测 null 和undefined</span><br></pre></td></tr></table></figure>
+[] instanceof Array     //true<br>new Date() instanceof Date     //true<br>null instanceof null      //报错<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">+Object.prototype.toString.call()</span><br></pre></td></tr></table></figure>
+Object.prototype.toString.call(‘’)    //[object String]<br>Object.prototype.toString.call(1)    //[object Number]<br>Object.prototype.toString.call(undefined)    //[object undefined]<br>Object.prototype.toString.call(new Function())    //[object Function]<br>Object.prototype.toString.call([])    //[object Array]<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">显示类型转换:</span><br><span class="line">转为Number： Number() | parseFloat() | parseInt()</span><br><span class="line">转为String： String() | toString()</span><br><span class="line">转为Boolean： Boolean()   转之后false的有：undefined null false +0 -0 NaN &quot;&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">隐式转换:   +  &#x3D;&#x3D;</span><br><span class="line">加法运算：一方是字符串类型，另一方就会被转成字符串</span><br><span class="line">其他运算：一方是数字，另一方就会被转成数字</span><br></pre></td></tr></table></figure>
+1 + ‘1’    //‘11’<br>2 * ‘2’    // 4<br>[1, 2] + [2, 1]    //‘1,22,1’<br>// [1, 2].toString() -&gt; ‘1,2’<br>// [2, 1].toString() -&gt; ‘2,1’<br>// ‘1,2’ + ‘2,1’ = ‘1,22,1’</li>
+</ul>
+<p>‘a’ + + ‘b’    //‘aNaN’<br>// + ‘b’ -&gt; NaN</p>
+<pre><code>
+
+x == y   返回  true  或者  false
+
++ x、y类型相同
+  x为undefined  =&gt; true
+  x为null  =&gt; true
+  x为number  
+       x为NaN   =&gt; true
+       x、y值相等   =&gt; true
+       x为 +0 y为 -0   =&gt; true
+  x为String，y跟他完全相同字符序列   =&gt; true
+  x为Boolean，同时为true或者false   =&gt; true
+  x、y引用同一对象   =&gt; true
++ x为null，y为undefined   =&gt; true
++ x为Number，y为String 返回比较x == toNumber(y)的结果
++ x为Boolean，返回比较toNumber(x) == y的结果
++ x为String或Number，且y为Object，返回比较 x == y的结果
+
+
+
+
+
+
+
 
 </code></pre>
-</li>
-</ul>
-<p>###显示类型转换<br>转为Number： Number() | parseFloat() | parseInt()<br>转为String： String() | toString()<br>转为Boolean： Boolean()   转之后false的有：undefined null false +0 -0 NaN “”</p>
-<p>###隐式转换   +  ==</p>
 
     </div>
 
@@ -303,6 +331,7 @@ typeof null === &#39;object&#39;
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%9F%E5%A7%8B%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">原始类型:</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
