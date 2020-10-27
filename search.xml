@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>动态style</title>
+      <link href="/2020/10/27/%E5%8A%A8%E6%80%81style/"/>
+      <url>/2020/10/27/%E5%8A%A8%E6%80%81style/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/img/maimai8.jpeg"><br>麦麦：我~~ 这样的吗</p><a id="more"></a><p>做一个switch开关 开和关的时候上面的文字位置是不一样的</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;span :style&#x3D;&quot;&#123;&#39;right&#39;:(switchValue ? &#39;12%&#39; : &#39;7%&#39;)&#125;&quot;&gt;&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Cookie 的 samesite属性</title>
       <link href="/2020/10/22/Cookie-%E7%9A%84-samesite%E5%B1%9E%E6%80%A7/"/>
       <url>/2020/10/22/Cookie-%E7%9A%84-samesite%E5%B1%9E%E6%80%A7/</url>
